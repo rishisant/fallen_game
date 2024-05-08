@@ -1,0 +1,35 @@
+/* 
+    真田理志
+    THIS CSS CONTAINS MAIN STYLES FOR THE BACKGROUND AND THE MAIN CONTENT
+    SHOWN IN THE MAIN PAGE, ETC.
+
+    FONTS ETC ARE MANAGED HERE.
+*/
+
+/* IMPORT VT323 GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@font-face {
+    font-family: 'AKHAAR';
+    src: url('../fonts/AHKAAR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.akhaar {
+    font-family: 'AKHAAR', sans-serif;
+}

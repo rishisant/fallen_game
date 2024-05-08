@@ -1,0 +1,111 @@
+/*
+    真田理志
+    PARALLAX BACKGROUND CSS
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.parallax-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.parallax-background {
+    width: 110vw;  
+    height: 110vh;
+    background-image: url('../img/backg1.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.2s ease-out; 
+}
+
+.invisible-spacer {
+    font-size: 0px;
+    margin-top: 12.5%;
+}
+
+.parallax-menu-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.parallax-menu-content {
+    /* display in the very center of the screen */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5rem;
+}
+
+.game-title-text {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.game-title-subtext {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.menu-option {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+}
+
+.button-background {
+    background-image: url(../img/pixel-back.png);
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease-out;
+}
+
+.button-background:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.menu-content {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.menu-content-text {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+

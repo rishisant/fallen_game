@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+// Add all menu-slice components
+import MainMenu from "./window-slices/MainMenu";
+import AboutGame from "./window-slices/AboutGame";
+import HowPlay from "./window-slices/HowPlay";
+import GameIntro from "./window-slices/GameIntro";
+import SelectionScreen from "./window-slices/SelectionScreen";
+import GameScreen from "./window-slices/GameScreen";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainMenu />} />
+        <Route path="/about" element={<AboutGame />} />
+        <Route path="/how-to-play" element={<HowPlay />} />
+        <Route path="/game-intro" element={<GameIntro />} />
+        <Route path="/selection-screen" element={<SelectionScreen />} />
+        <Route path="/game" element={<GameScreen />} />
+      </Routes>
+    </Router>
   );
 }
 
