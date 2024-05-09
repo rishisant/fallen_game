@@ -82,13 +82,15 @@ const initialState = {
     baseVariables: {
         timePassed: 0,
         godChosen: null, // Will become either raphat, isahra, or mil'aab
-        trust: 25, // multipliers
-        wealth: 25, // multipliers
-        magic: 25, // multipliers
+        trust: 25, // multipliers (so 25%) (if it reaches 0, you lose)
+        wealth: 100, // currency
+        maxWealth: 1000, // max currency
+        magic: 0, // magic power
+        maxMagic: 100, // max magic power
         percentageConquered: 0, // percentage to 100 (if the population reaches integer of 1,000,000 you win, so your population is 20,000, you have 5% of the world)
     },
     secondaryVariables: {
-        population: 20, // actual integer
+        population: 100, // actual integer
         godHappiness: 50, // multipliers
         knowledge: 50, // multipliers
         birthRate: 5, // actual integer
@@ -174,12 +176,44 @@ const gameReducer = (state, action) => {
                     wealth: state.baseVariables.wealth + action.payload,
                 }
             };
+        case 'INCREMENT_MAXWEALTH':
+            return {
+                ...state,
+                baseVariables: {
+                    ...state.baseVariables,
+                    maxWealth: state.baseVariables.maxWealth + action.payload,
+                }
+            };
+        case 'DECREMENT_MAXWEALTH':
+            return {
+                ...state,
+                baseVariables: {
+                    ...state.baseVariables,
+                    maxWealth: state.baseVariables.maxWealth - action.payload,
+                }
+            };
         case 'DECREMENT_MAGIC':
             return {
                 ...state,
                 baseVariables: {
                     ...state.baseVariables,
                     magic: state.baseVariables.magic - action.payload,
+                }
+            };
+        case 'INCREMENT_MAXMAGIC':
+            return {
+                ...state,
+                baseVariables: {
+                    ...state.baseVariables,
+                    maxMagic: state.baseVariables.maxMagic + action.payload,
+                }
+            };
+        case 'DECREMENT_MAXMAGIC':
+            return {
+                ...state,
+                baseVariables: {
+                    ...state.baseVariables,
+                    maxMagic: state.baseVariables.maxMagic - action.payload,
                 }
             };
         case 'INCREMENT_MAGIC':

@@ -1,6 +1,6 @@
 /*
     真田理志
-    どうやって遊ぶのか
+    なぜプレイするのか
 */
 
 import React, { useState } from 'react';
@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 import logoMain from '../assets/img/general-UI/FIDOLS_logo.png';
 
-const HowPlay = () => {
+const WhyPlay = () => {
     const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0); // Max 2
 
@@ -30,18 +30,19 @@ const HowPlay = () => {
                 <div className="text-container">
                     <div className="text-container-row">
                         <h3 className="text-container-title">
-                            <p>HOW TO PLAY?</p>
+                            <p>WHY WAS THIS GAME DESIGNED?</p>
                         </h3>
                         {
                             currentSlide === 0 && (
                                 <>
                                     <p className="text-container-text">
-                                        You initially start off with a sample population of 100 people, and you must choose
-                                        one of three idols to worship, each one granting you different bonuses and abilities.
+                                        Ever since the beginning of recorded human history, there have been stories and myths of
+                                        great heroes and gods who have performed incredible feats and deeds. These stories have
+                                        been passed down from generation to generation, and have been told and retold in many
+                                        different ways.
                                         <br></br> <br></br>
-                                        There are three main resources that you must manage, those being: <i>gold</i>, <i>trust</i>,
-                                        and <i>magic power</i>. Each one of these resources is vital to your expansion and growth,
-                                        and you must manage them wisely in order to succeed.
+                                        There is a fascination with the spiritual aspect of creation and human existence, and
+                                        the stories of false gods and idols have been a part of human culture for thousands of years.
                                     </p>
                                 </>
                             )
@@ -50,13 +51,13 @@ const HowPlay = () => {
                             currentSlide === 1 && (
                                 <>
                                     <p className="text-container-text">
-                                        You must also manage your relationship with the false idol, as they will constantly
-                                        demand sacrifices and offerings from you. If you fail to meet their demands, they will
-                                        become angry and your luck will diminish, making it harder for you to succeed.
+                                        This game seeks to mirror and reflect that, through a story that is both familiar and
+                                        yet foreign. You, the player, seek to praise false idols in order to preserve your own
+                                        peoples. 
                                         <br></br> <br></br>
-                                        However, keeping the false idol happy may come at the cost of your own people, as they
-                                        will demand more and more from you as time goes on. You must balance the needs of your
-                                        people with the demands of the false idol in order to truly conquer the world.
+                                        The game is a reflection of the human condition, and the lengths that religious leaders
+                                        and followers will go to in order to preserve their own way of life. This game seeks to
+                                        mimic the stories and tales of old, with a hint of realism and a touch of the fantastic.
                                     </p>
                                 </>
                             )
@@ -65,13 +66,13 @@ const HowPlay = () => {
                             currentSlide === 2 && (
                                 <>
                                     <p className="text-container-text">
-                                        Each idol grants a special ability that is unique to them, which can be used to help
-                                        you in your quest for power and control. These unique abilities can be used to in tough
-                                        situations in order to turn the tide of battle in your favor.
+                                        So, I wish you good luck in your journey, and I hope that the game will provide you with
+                                        not only a fun and engaging experience, but also a deeper understanding of the human
+                                        condition and the desires and motivations that drive the quest for power and control.
                                         <br></br> <br></br>
-                                        The game is won by conquering all of the other nations and tribes in the world, and
-                                        establishing your own empire that will last for generations to come. Do you have what
-                                        it takes to destroy all idols but that of your own?
+                                        <span style={{ textAlign: 'right', display: 'block', margin: '.25rem .25rem', color: '#858585', fontStyle: 'italic' }}>
+                                            - R. Sanada
+                                        </span>
                                     </p>
                                 </>
                             )
@@ -100,4 +101,4 @@ const HowPlay = () => {
     );
 }
 
-export default HowPlay;
+export default WhyPlay;

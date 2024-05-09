@@ -1,44 +1,37 @@
 /*
     真田理志
-    THIS IS THE MAIN MENU COMPONENT.
+    マインメニュー画面
 */
 
-import React from "react";
-import ParallaxBackground from "../components/ParallaxBackground";
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { useNavigate } from "react-router-dom";
+import logoMain from '../assets/img/general-UI/FIDOLS_logo.png';
 
 const MainMenu = () => {
     const navigate = useNavigate();
 
     return (
         <>
-            <ParallaxBackground />
-            <div className='parallax-menu-root'>
-                <div className='parallax-menu-content'>
-                    <div className='game-title'>
-                        <h1 className='game-title-text'>FALLEN IDOLS</h1>
-                        <h3 className='game-title-subtext'>A SANADA GAME...</h3>
+            <div className="full-container">
+                <div className="top-container">
+                    <img src={logoMain} className="logo-main" alt="Fallen Idols Logo" />
+                </div>
+
+                <div className="buttons-container">
+                    <div className="button special" onClick={() => navigate('/Start')}>
+                        START GAME...
                     </div>
-
-                    <div className='menu-options'>
-                        <div className='button-background' onClick={() => navigate('/game-intro')}>
-                            START GAME!
-                        </div>
-
-                        <div className='button-background' onClick={() => navigate('/how-to-play')}>
-                            HOW TO PLAY!
-                        </div>
-
-                        <div className='button-background' onClick={() => navigate('/about')}>
-                            WHY PLAY?
-                        </div>
+                    <div className="button special" onClick={() => navigate('/How')}>
+                        HOW TO PLAY?
+                    </div>
+                    <div className="button special" onClick={() => navigate('/Why')}>
+                        WHY PLAY?
                     </div>
                 </div>
             </div>
         </>
     );
-
-};
+}
 
 export default MainMenu;

@@ -1,0 +1,53 @@
+/*
+    真田理志
+    トップバーのスタイル
+*/
+
+.top-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-small {
+    width: 64px;
+}
+
+.top-bar-items {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.top-bar-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.icon-small {
+    width: 32px;
+    height: 32px;
+}
+
+.top-bar-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+

@@ -1,0 +1,19 @@
+/*
+    真田理志
+    ベースCSS
+*/
+
+@font-face {
+    font-family: 'Akhaar';
+    src: url('../fonts/AHKAAR.ttf') format('truetype');
+}
+
+.akh {
+    font-family: 'Akhaar', cursive;
+}
+
+.akh.st {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25));
+}
