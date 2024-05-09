@@ -11,13 +11,16 @@ import { useNavigate } from 'react-router-dom';
 
 /* IMPORT TOP BAR */
 import TopBar from '../components/TopBar';
+/* IMPORT BUG TEST SCORE TO TRACK ALL VARIABLES */
+import BugTestStore from '../components/BugTestStore';
 
 const BugTest = () => {
     
     return (
         <>
             <div className="full-container">
-            <TopBar />
+                <TopBar />
+                <BugTestStore />
             </div>
         </>
     );

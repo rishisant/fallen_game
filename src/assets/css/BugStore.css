@@ -1,0 +1,48 @@
+/*
+    真田理志
+    バッグストアのCSS
+*/
+
+/*
+THIS IS THE CSS FOR THE BUG STORE: ONLY USED FOR BETA TESTING
+*/
+
+.bug-store-variables {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    padding: 0.5rem 2rem;
+}
+
+.bug-store-column {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: 1rem;
+    align-items:last baseline;
+}
+
+.bug-store-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.bug-store-item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.bug-store-text {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+

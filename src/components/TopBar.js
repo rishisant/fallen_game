@@ -49,20 +49,3 @@ const TopBar = () => {
 }
 
 export default TopBar;
-
-/*
-
-game Context
-const initialState = {
-    baseVariables: {
-        timePassed: 0,
-        godChosen: null, // Will become either raphat, isahra, or mil'aab
-        trust: 25, // multipliers (so 25%) (if it reaches 0, you lose)
-        wealth: 100, // currency
-        maxWealth: 1000, // max currency
-        magic: 0, // magic power
-        maxmagic: 100, // max magic power
-        percentageConquered: 0, // percentage to 100 (if the population reaches integer of 1,000,000 you win, so your population is 20,000, you have 5% of the world)
-    },
-    secondaryVariables: {
-        */
