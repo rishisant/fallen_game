@@ -3,16 +3,23 @@
     バッグテスト用のストア
 */
 
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { GameContext } from '../contexts/GameContext';
 
 import '../assets/css/BugStore.css';
 
 const BugTestStore = () => {
     const { gameState } = useContext(GameContext);
+    const [isShown, setIsShown] = useState(false);
 
     return (
         <>
+            <div className="close-button" style={{ fontSize: '1.5rem', cursor: 'pointer' }} onClick={() => setIsShown(!isShown)}>
+                X
+            </div>
+
+            {isShown && (
+                
             <div className="bug-store-variables">
                 <div className="bug-store-column">
                     <div className="bug-store-title">
@@ -255,6 +262,7 @@ const BugTestStore = () => {
                 </div>
 
             </div>
+            )}
         </>
     );
 };
